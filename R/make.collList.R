@@ -2,7 +2,7 @@
 #' @export
 make.collList <- function(x,
                           excludeYes = TRUE, # excludes plants and accessions for which fruit and flower are collected
-                          excludeAreas = x$bg.table$bglocation[!bg.table$INCLUDE],
+                          excludeAreas = x$bg.table$bglocation[!x$bg.table$INCLUDE],
                           makeSnapshot = TRUE,
                           sortTables = TRUE,
                           trimL = 40,
@@ -13,7 +13,7 @@ make.collList <- function(x,
                           phenoAdd = TRUE,
                           useCollSheets = FALSE,
 						              makeAccReport = TRUE,
-                          outdir = format(Sys.time(), "out/table.snapshot.%Y-%m-%d_%H.%M"),
+                          outdir = format(Sys.time(), "table.snapshot.%Y-%m-%d_%H.%M"),
 						              reportOnlyAccessionsWeCollect = TRUE,
                           cleanFamCol = TRUE, # remove family column b/f writing tables
                           frFams = c('Cupressaceae',
@@ -93,7 +93,7 @@ make.collList <- function(x,
   }
 
   if(phenoAdd) {
-    phenoTable <- phenologyMatch()
+    phenoTable <- phenologyMatch(x)
     out.acc <- cbind(out.acc, phenoTable[gsub(" ", "", out.acc$sciname), ])
     out.plant <- cbind(out.plant, phenoTable[gsub(" ", "", out.plant$sciname), ])
     out.acc$noPh <- ifelse(is.na(out.acc$Mr), '**', '')

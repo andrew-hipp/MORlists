@@ -7,7 +7,7 @@
 make.collList(
   x,
   excludeYes = TRUE,
-  excludeAreas = x$bg.table$bglocation[!bg.table$INCLUDE],
+  excludeAreas = x$bg.table$bglocation[!x$bg.table$INCLUDE],
   makeSnapshot = TRUE,
   sortTables = TRUE,
   trimL = 40,
@@ -18,7 +18,7 @@ make.collList(
   phenoAdd = TRUE,
   useCollSheets = FALSE,
   makeAccReport = TRUE,
-  outdir = format(Sys.time(), "out/table.snapshot.\%Y-\%m-\%d_\%H.\%M"),
+  outdir = format(Sys.time(), "table.snapshot.\%Y-\%m-\%d_\%H.\%M"),
   reportOnlyAccessionsWeCollect = TRUE,
   cleanFamCol = TRUE,
   frFams = c("Cupressaceae", "Pinaceae", "Cephalotaxaceae", "Taxaceae"),
