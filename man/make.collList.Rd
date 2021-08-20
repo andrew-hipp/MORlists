@@ -26,5 +26,12 @@ make.collList(
 )
 }
 \description{
-Make collections lists
+This is the master function. Run this on an object from \code{read.mor}
+}
+\examples{
+ \dontRun{
+   workingDir <- 'C:/Users/ahipp/Dropbox/Herbarium/BRAHMS/COLL.LISTS.2017/data/AAA.ACTIVE.SHEETS'
+   dat <- read.mor(workingDir)
+   out <- make.collList(dat, sciQuery = 'Quercus|Acer|Tilia')
+ }
 }

@@ -1,4 +1,13 @@
 #' Make collections lists
+#'
+#' This is the master function. Run this on an object from `read.mor`
+#'
+#' @examples
+#'  \dontRun{
+#'    workingDir <- 'C:/Users/ahipp/Dropbox/Herbarium/BRAHMS/COLL.LISTS.2017/data/AAA.ACTIVE.SHEETS'
+#'    dat <- read.mor(workingDir)
+#'    out <- make.collList(dat, sciQuery = 'Quercus|Acer|Tilia')
+#'  }
 #' @export
 make.collList <- function(x,
                           excludeYes = TRUE, # excludes plants and accessions for which fruit and flower are collected
