@@ -35,7 +35,8 @@ make.area.collLists <- function(x,
   for(i in area.list) {
     if(verbose) message(paste('... doing area', i))
     x.temp <- x
-    x$lc.table = x$lc.table[x$lc.table$gardenlocalityname %in% x$bg.table$bglocation[x$bg.table$COLLECTING.LIST == i], ]
+    x.temp$lc.table <-
+      x.temp$lc.table[x.temp$lc.table$gardenlocalityname %in% x.temp$bg.table$bglocation[x.temp$bg.table$COLLECTING.LIST == i], ]
     temp <- make.collList(x.temp,
                           makeSnapshot = FALSE,
                           ...)
