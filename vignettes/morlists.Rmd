@@ -1,0 +1,21 @@
+---
+title: "Make MOR collecting lists"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Make MOR collecting lists}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MORlists)
+```
+
+# Making collection lists, MOR 2021
