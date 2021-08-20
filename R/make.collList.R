@@ -3,7 +3,7 @@
 #' This is the master function. Run this on an object from `read.mor`
 #'
 #' @examples
-#'  \dontRun{
+#'  \dontrun{
 #'    workingDir <- 'C:/Users/ahipp/Dropbox/Herbarium/BRAHMS/COLL.LISTS.2017/data/AAA.ACTIVE.SHEETS'
 #'    dat <- read.mor(workingDir)
 #'    out <- make.collList(dat, sciQuery = 'Quercus|Acer|Tilia')
