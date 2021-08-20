@@ -16,7 +16,7 @@
 #' @export
 make.area.collLists <- function(x,
                                 fileHeader = '',
-                                outdir = "tablesByArea.snapshot.%Y-%m-%d_%H.%M",
+                                outdir = format(Sys.time(), "tablesByArea.snapshot.%Y-%m-%d_%H.%M"),
                                 verbose = TRUE,
                                 area.list = NA,
                                 do.all = FALSE, ...) {
