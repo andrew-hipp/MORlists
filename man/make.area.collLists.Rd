@@ -15,5 +15,17 @@ make.area.collLists(
 )
 }
 \description{
-Make collection lists for each area
+The master function, generally the only one you call after \code{read.mor}.
+}
+\examples{
+ \dontrun{
+   workingDir <- 'C:/Users/ahipp/Dropbox/Herbarium/BRAHMS/COLL.LISTS.2017/data/AAA.ACTIVE.SHEETS'
+   dat <- read.mor(workingDir)
+   lastCollList <- make.area.collLists(dat,
+                       sciQuery = "Quercus|Malus|Tilia|Ulmus",
+                       do.all = T,
+                       useCollSheets = T,
+                       excludeYes = TRUE, # change to T
+                       fileHeader = "")
+ }
 }

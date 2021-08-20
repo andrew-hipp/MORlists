@@ -1,6 +1,9 @@
 #' Make collections lists
 #'
-#' This is the master function. Run this on an object from `read.mor`
+#' Makes a single collection list from a `read.mor` object
+#'
+#' This function is generally called from `make.area.collLists`, to make a set of
+#' collection lists for all areas, as well as a master list.
 #'
 #' @examples
 #'  \dontrun{
@@ -29,6 +32,7 @@ make.collList <- function(x,
                                         'Pinaceae',
                                         'Cephalotaxaceae',
                                         'Taxaceae'), # if !is.na(frFams[1]), specimens are required from these families only if they need fr, no fls
+                          verbose = FALSE,
                           ...) {
   ## get tables from x:
   dat.herb = x$herb.table
@@ -116,7 +120,7 @@ make.collList <- function(x,
 	  out.report <- character(0)
     for(i in seq(dim(out.acc)[1])) {
 		## debugging stuff
-		message(paste('doing out.acc line', i))
+		if(verbose) message(paste('doing out.acc line', i))
 		#print(sapply(strsplit(as.character(out.plant$plantID), "*", fixed = TRUE), function(x) x[[1]][1] == as.character(accNo)))
       accNo <- out.acc[i, 'lc.acc']
       j <- try(

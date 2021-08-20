@@ -22,11 +22,16 @@ make.collList(
   reportOnlyAccessionsWeCollect = TRUE,
   cleanFamCol = TRUE,
   frFams = c("Cupressaceae", "Pinaceae", "Cephalotaxaceae", "Taxaceae"),
+  verbose = FALSE,
   ...
 )
 }
 \description{
-This is the master function. Run this on an object from \code{read.mor}
+Makes a single collection list from a \code{read.mor} object
+}
+\details{
+This function is generally called from \code{make.area.collLists}, to make a set of
+collection lists for all areas, as well as a master list.
 }
 \examples{
  \dontrun{
