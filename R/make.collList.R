@@ -61,6 +61,7 @@ make.collList <- function(x,
 	  dat.coll <- dat.coll[dat.coll$acc %in% row.names(out.acc), ]
 	  out.acc[dat.coll$acc[grep('FL', dat.coll$parts)], 'FL'] <- 'Y'
 	  out.acc[dat.coll$acc[grep('FR', dat.coll$parts)], 'FR'] <- 'Y'
+    out.acc[dat.coll$acc[grep('V', dat.coll$parts)], 'V'] <- 'Y'
     } # close useCollSheets
 
 
